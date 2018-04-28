@@ -33,18 +33,22 @@ public class HomeTasks {
                 System.out.println(myArray[i] + " - четное число; ");
             } else System.out.println(myArray[i] + " - нечетное число; ");
         }
+
         int min = myArray[0];
-        for (int i = 0; i < myArray.length; i++) {
+
+        for (int i = 1; i < myArray.length; i++) {
             if (myArray[i] < myArray[0]) {
                 min = myArray[i];
             }
+
         }
         System.out.println("Минимальное значение: " + min);
 
-        int max = myArray[0];
 
-        for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] >= myArray[0]) {
+       int max = myArray[0];
+
+        for (int i = 1; i < myArray.length; i++) {
+            if (myArray[i] > myArray[0]) {
                 max = myArray[i];
             }
 
@@ -73,15 +77,55 @@ public class HomeTasks {
                     System.out.println("Трехзначное число в котором нет одинаковых цифр: " + num[i]);
             }
 
-                if (num[i].length() == 6) {
-//                    String firstPart = num.substring(0, 2);
+
+        }
+
+        for (int i = 0; i < myArray.length; i++) {
+
+            int polnoeChislo = myArray[i];
+
+
+            String str = String.valueOf(polnoeChislo);
+
+//           String str = polnoeChislo + "";
+
+            if (str.length() > 3 && str.length() % 2 == 0) {
+
+
+                String firstPart = str.substring(0, str.length() / 2);
+                String secondPart = str.substring(str.length() / 2, str.length());
+
+                int pervayaPolovina = Integer.parseInt(firstPart);
+                int vtorayayaPolovina = Integer.parseInt(secondPart);
+                int zapasnoe1 = pervayaPolovina;
+                int sum1 = 0;
+                while (zapasnoe1 != 0) {
+                    sum1 += zapasnoe1 % 10;
+                    zapasnoe1 /= 10;
+
+                    int zapasnoe2 = vtorayayaPolovina;
+                    int sum2 = 0;
+                    while (zapasnoe2 != 0) {
+                        sum2 += zapasnoe2 % 10;
+                        zapasnoe2 /= 10;
+                        if (sum1 == sum2) {
+
+                        }
+                    }
                 }
+
+                System.out.println(firstPart + secondPart + " - счастливое число;");
             }
 
 
+        }
 
-        //5. Ввести целые числа как аргументы командной строки,
-        // подсчитать их суммы (произведения) и вывести результат на консоль.
+
+
+
+
+//5. Ввести целые числа как аргументы командной строки,
+// подсчитать их суммы (произведения) и вывести результат на консоль.
 /*        int number1, number2;
         System.out.println("Please enter first number: ");
         Scanner scan1 = new Scanner(System.in);
@@ -108,8 +152,8 @@ public class HomeTasks {
             System.out.println("Welcome to the system.");*/
 
 
-        //3. Вывести заданное количество случайных чисел
-        // с переходом и без перехода на новую строку.
+//3. Вывести заданное количество случайных чисел
+// с переходом и без перехода на новую строку.
 /*       int a=1;
        int b=2;
        int c=3;
@@ -120,14 +164,14 @@ public class HomeTasks {
        System.out.print(a + "\n" + b + "\n" + c + "\n" + d + "\n" + e);*/
 
 
-        //2. Отобразить в окне консоли аргументы командной строки в обратном порядке.
+//2. Отобразить в окне консоли аргументы командной строки в обратном порядке.
 
 /*        for (int i = args.length - 1; i >= 0; i--) {
             System.out.println("Argument[" + i + "]: " + args[i]);
         }*/
 
 
-        // 1. Приветствовать любого пользователя посе ввода им имени в консоль.
+// 1. Приветствовать любого пользователя посе ввода им имени в консоль.
 /*
         System.out.println("Hi, please enter your name: ");
         Scanner scan = new Scanner(System.in);
@@ -136,10 +180,10 @@ public class HomeTasks {
 */
 
 
-    }
-
-
 }
+
+
+        }
 
 
 
