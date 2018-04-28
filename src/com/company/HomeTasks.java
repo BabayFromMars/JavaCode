@@ -117,7 +117,6 @@ public class HomeTasks {
                 System.out.println(firstPart + secondPart + " - счастливое число;");
             }
 
-
         }
 
 
