@@ -20,6 +20,7 @@ public class HomeTasks {
         //6.6. «Счастливые» числа.
 
 
+
 /*
         System.out.println("Сколько чисел вы хотите ввести: ");
         Scanner scan = new Scanner(System.in);
